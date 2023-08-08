@@ -45,7 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () async {
             _launchAndroidUiKitChannel
                 .invokeMethod('launchAndroidUiKit')
-                .then((value) => showSnackbar(context, value.toString()))
+                .then(
+                    (value) => showSnackbar(context, 'Launched Android UiKit'))
                 .catchError((error) => showSnackbar(context, error.toString()));
           },
           child: const Text("Launch Android UiKit"),
